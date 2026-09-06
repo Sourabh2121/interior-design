@@ -20,10 +20,10 @@ export default function WhyChooseUs() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="process" className="py-5 bg-white position-relative" ref={containerRef}>
+    <section id="process" className="bg-white position-relative" ref={containerRef}>
       <Container className="py-5">
         <div className="text-center mb-5 pb-4">
-          <motion.h6 
+          <motion.h6
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
           >
             Our Process
           </motion.h6>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
         <div className="position-relative">
           {/* Vertical Line */}
           <div className="position-absolute start-50 translate-middle-x h-100 bg-light d-none d-lg-block" style={{ width: '4px' }}>
-            <motion.div 
+            <motion.div
               style={{ height: lineHeight, backgroundColor: 'var(--accent-color)' }}
               className="w-100"
             />
@@ -64,15 +64,15 @@ export default function WhyChooseUs() {
                   <p className="text-muted mb-0">{step.desc}</p>
                 </motion.div>
               </Col>
-              
+
               <Col lg={2} className="d-none d-lg-flex justify-content-center align-items-center">
-                <motion.div 
+                <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
-                  className="rounded-circle d-flex align-items-center justify-content-center fw-bold text-white shadow"
-                  style={{ width: '60px', height: '60px', backgroundColor: 'var(--primary-color)', zIndex: 2 }}
+                  className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
+                  style={{ width: '60px', height: '60px', backgroundColor: 'var(--primary-color)', color: 'var(--accent-color)', zIndex: 2, fontSize: '1.2rem' }}
                 >
                   {step.id}
                 </motion.div>

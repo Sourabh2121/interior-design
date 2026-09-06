@@ -1,36 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 :root {
-  --primary-color: #0b1f33;
-  /* Dark Navy for premium look */
-  --accent-color: #d4af37;
-  /* Gold/Brass for luxury */
-  --text-dark: #2d3436;
-  --bg-light: #f8f9fa;
-  --bg-dark: #121212;
-  --gradient-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-  --secondary-color: #f1f2f6;
-  /* Light gray for alternating sections */
-  --white-color: #ffffff;
+  /* Logo Colors */
+  --cs-red: #e53935;
+  --cs-orange: #fb8c00;
+  --cs-yellow: #fdd835;
+  --cs-green: #43a047;
+  --cs-blue: #1e88e5;
+  --cs-lightblue: #03a9f4;
+  --cs-purple: #8e24aa;
+
+  /* Light Theme Color Palette */
+  --primary-color: #ffffff;
+  --secondary-color: #f8f9fa;
+  --accent-color: var(--cs-lightblue); /* Logo Light Blue */
+  --accent-hover: var(--cs-blue); /* Logo Blue */
+  
+  --text-light: #ffffff;
+  --text-muted: #a3a3a3;
+  --text-dark: #121212;
+  
+  --bg-light: #fdfbf7;
+  --bg-dark: #ffffff;
+  
+  --gradient-logo: linear-gradient(90deg, var(--cs-blue), var(--cs-green), var(--cs-yellow), var(--cs-red));
+  --gradient-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-cinzel: 'Cinzel', serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-sans);
   color: var(--text-dark);
-  background-color: var(--bg-light);
+  background-color: var(--bg-dark);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.text-gold {
+  color: var(--accent-color) !important;
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #d4af37, #f3e5ab);
+  background: var(--gradient-logo);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.luxury-card {
+  background: var(--primary-color);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  transition: all 0.4s ease;
+}
+
+.luxury-card:hover {
+  border-color: rgba(3, 169, 244, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+/* Premium Dropdown Styles */
+@media (min-width: 992px) {
+  .nav-dropdown-custom .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    min-width: 220px;
+    margin-top: 0;
+  }
+  .nav-dropdown-custom:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+  color: var(--accent-color) !important;
+  padding-left: 2rem;
+}
+
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.dropdown-item:hover::before {
+  width: 10px;
 }
 
 /* Smooth scrolling for the whole page */
@@ -42,6 +141,10 @@ html {
 .nav-link-custom {
   position: relative;
   transition: color 0.3s ease;
+  font-family: var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 .nav-link-custom:hover {
@@ -52,14 +155,14 @@ html {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 50%;
   background-color: var(--accent-color);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transform: translateX(-50%);
 }
 
 .nav-link-custom:hover::after {
-  width: 70%;
+  width: 100%;
 }

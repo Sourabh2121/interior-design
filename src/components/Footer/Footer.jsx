@@ -3,12 +3,12 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="pt-5 pb-4" style={{ backgroundColor: 'var(--primary-color)', color: 'var(--white-color)' }}>
+    <footer className="pt-5 pb-4" style={{ backgroundColor: '#121212', color: '#ffffff' }}>
       <Container className="pt-4">
         <Row className="gy-5">
           <Col lg={4} className="pe-lg-5">
             <h3 className="fw-bold mb-4">
-              <span className="text-gradient">Flip</span>Space
+              <span className="text-gradient">CS</span> India
             </h3>
             <p className="text-white-50 mb-4">
               Premium commercial interior design agency specializing in modern, luxurious, and highly functional workspaces.
@@ -56,7 +56,7 @@ export default function Footer() {
             <p className="text-white-50 mb-4">Subscribe to get the latest updates and design insights.</p>
             <div className="input-group mb-3">
               <input type="email" className="form-control bg-transparent text-white border-secondary" placeholder="Your Email Address" />
-              <button className="btn fw-bold px-3" style={{ backgroundColor: 'var(--accent-color)', color: 'var(--primary-color)' }}>
+              <button className="btn fw-bold px-3" style={{ backgroundColor: 'var(--accent-color)', color: '#121212' }}>
                 Subscribe
               </button>
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
         <hr className="mt-5 border-secondary" />
         
         <div className="text-center text-white-50 pt-3">
-          <small>&copy; {new Date().getFullYear()} FlipSpace Design. All rights reserved.</small>
+          <small>&copy; {new Date().getFullYear()} CS India Design. All rights reserved.</small>
         </div>
       </Container>
     </footer>

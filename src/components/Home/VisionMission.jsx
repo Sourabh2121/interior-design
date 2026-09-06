@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function VisionMission() {
   return (
-    <section className="py-5" style={{ backgroundColor: 'var(--secondary-color)' }}>
+    <section className="" style={{ backgroundColor: 'var(--secondary-color)' }}>
       <Container className="py-5">
         <Row className="g-5">
           {/* Vision Section */}
@@ -15,7 +15,7 @@ export default function VisionMission() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8 }}
               className="p-5 h-100 rounded-4 shadow-sm"
-              style={{ backgroundColor: 'var(--white-color)' }}
+              style={{ backgroundColor: 'var(--primary-color)' }}
             >
               <div className="mb-4 d-inline-block p-3 rounded-circle" style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -23,8 +23,8 @@ export default function VisionMission() {
                   <circle cx="12" cy="12" r="4"></circle>
                 </svg>
               </div>
-              <h3 className="fw-bold mb-4" style={{ color: 'var(--primary-color)' }}>Our Vision</h3>
-              <p className="text-muted fs-5" style={{ lineHeight: 1.8 }}>
+              <h3 className="fw-bold mb-4" style={{ color: 'var(--text-dark)' }}>Our Vision</h3>
+              <p className="text-dark fs-5" style={{ lineHeight: 1.8, opacity: 0.8 }}>
                 To be the global benchmark in premium commercial interior design. We envision a world where every workspace is a masterpiece—an environment that inspires creativity, fosters well-being, and drives unparalleled business success.
               </p>
             </motion.div>
@@ -38,15 +38,15 @@ export default function VisionMission() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="p-5 h-100 rounded-4 shadow-lg"
-              style={{ backgroundColor: 'var(--primary-color)' }}
+              style={{ backgroundColor: 'var(--secondary-color)' }}
             >
-              <div className="mb-4 d-inline-block p-3 rounded-circle" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+              <div className="mb-4 d-inline-block p-3 rounded-circle" style={{ backgroundColor: 'rgba(3, 169, 244, 0.1)' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                 </svg>
               </div>
-              <h3 className="fw-bold mb-4" style={{ color: 'var(--white-color)' }}>Our Mission</h3>
-              <p className="text-white-50 fs-5" style={{ lineHeight: 1.8 }}>
+              <h3 className="fw-bold mb-4" style={{ color: 'var(--text-dark)' }}>Our Mission</h3>
+              <p className="text-dark fs-5" style={{ lineHeight: 1.8, opacity: 0.8 }}>
                 To transform ordinary spaces into extraordinary experiences. We strive to deliver innovative, functional, and aesthetically stunning interior solutions tailored to the unique identity and operational needs of every brand we partner with.
               </p>
             </motion.div>

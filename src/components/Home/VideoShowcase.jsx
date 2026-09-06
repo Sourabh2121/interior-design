@@ -29,7 +29,7 @@ export default function VideoShowcase() {
   };
 
   return (
-    <section className="py-5 overflow-hidden" style={{ backgroundColor: 'var(--primary-color)' }}>
+    <section className="overflow-hidden" style={{ backgroundColor: 'var(--primary-color)' }}>
       <Container className="py-5" ref={containerRef}>
         <div className="text-center mb-5">
           <motion.h2
@@ -37,7 +37,7 @@ export default function VideoShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="display-4 fw-bold text-white"
+            className="display-4 fw-bold text-dark"
           >
             Experience The <span className="text-gradient">Transformation</span>
           </motion.h2>
