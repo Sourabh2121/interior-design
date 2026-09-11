@@ -16,8 +16,8 @@ export default function AboutSection() {
   const rotateY = useTransform(scrollYProgress, [0, 1], [-15, 15]);
 
   return (
-    <section id="about" className="overflow-hidden" ref={ref} style={{ backgroundColor: 'var(--secondary-color)' }}>
-      <Container className="py-5 mt-5 mb-5">
+    <section id="about" className="overflow-hidden about-section" ref={ref}>
+      <Container className="py-5">
         <Row className="align-items-center gx-5">
           <Col lg={6} className="mb-5 mb-lg-0">
             <motion.div
@@ -29,60 +29,35 @@ export default function AboutSection() {
             >
               {/* Main Large Image */}
               <motion.div
-                className="overflow-hidden position-relative z-1 shadow-lg"
-                style={{
-                  height: '550px',
-                  width: '85%',
-                  rotateX,
-                  rotateY,
-                  transformStyle: "preserve-3d",
-                  border: '1px solid rgba(0,0,0,0.05)'
-                }}
+                className="overflow-hidden position-relative z-1 shadow-lg about-main-image"
+                style={{ rotateX, rotateY }}
               >
                 <motion.div
                   className="w-100 h-100"
                   style={{
-                    background: 'url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80") center/cover no-repeat',
+                    background: 'url("/cs-india/FINAL1.RGB_color.jpg") center/cover no-repeat',
                     y: yImage,
                     scale: 1.15
                   }}
                 ></motion.div>
-                <div className="position-absolute top-0 start-0 w-100 h-100" style={{ background: 'rgba(5,5,5,0.1)' }}></div>
+                <div className="position-absolute top-0 start-0 w-100 h-100 about-image-overlay"></div>
               </motion.div>
 
               {/* Secondary Floating Image */}
               <motion.div
-                className="overflow-hidden position-absolute z-2 shadow-lg"
-                style={{
-                  height: '300px',
-                  width: '50%',
-                  bottom: '-50px',
-                  right: '0',
-                  border: '8px solid var(--bg-light)',
-                  y: useTransform(scrollYProgress, [0, 1], [50, -50])
-                }}
+                className="overflow-hidden position-absolute z-2 shadow-lg about-secondary-image"
+                style={{ y: useTransform(scrollYProgress, [0, 1], [50, -50]) }}
               >
                 <div
                   className="w-100 h-100"
                   style={{
-                    background: 'url("https://images.unsplash.com/photo-1542361345-89e58247f2d5?auto=format&fit=crop&q=80") center/cover no-repeat'
+                    background: 'url("/cs-india/Livingroom_ni_1_1.jpg") center/cover no-repeat'
                   }}
                 ></div>
               </motion.div>
 
               {/* Decorative element behind images */}
-              <div
-                className="position-absolute z-0"
-                style={{
-                  border: '1px solid var(--accent-color)',
-                  top: '-30px',
-                  bottom: '30px',
-                  left: '-30px',
-                  right: '15%',
-                  opacity: 0.3,
-                  background: "#129dd98c"
-                }}
-              ></div>
+              <div className="position-absolute z-0 about-decorative-border"></div>
             </motion.div>
           </Col>
           <Col lg={6} className="ps-lg-5">
@@ -93,55 +68,39 @@ export default function AboutSection() {
               transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="d-flex align-items-center mb-4">
-                <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--accent-color)', marginRight: '15px' }}></div>
-                <h6 className="text-uppercase mb-0 font-sans" style={{ color: 'var(--accent-color)', letterSpacing: '0.2em', fontSize: '0.8rem' }}>
+                <div className="section-label-line section-label-line--40"></div>
+                <h6 className="text-uppercase mb-0 font-sans section-label-text">
                   The Agency
                 </h6>
               </div>
 
-              <h2 className="display-4 mb-4 text-dark font-cinzel" style={{ lineHeight: 1.2 }}>
+              <h2 className="display-4 mb-4 text-dark font-cinzel about-heading">
                 Redefining <br />
-                <span className="font-serif text-logo-accent font-italic" style={{ fontStyle: 'italic', color: 'var(--cs-lightblue)' }}>Commercial Interiors</span>
+                <span className="font-serif text-logo-accent font-italic accent-italic">Commercial Interiors</span>
               </h2>
 
-              <p className="lead text-muted mb-5 font-sans" style={{ fontWeight: 300, lineHeight: 1.8, fontSize: '1.1rem' }}>
+              <p className="lead text-muted  font-sans about-description">
                 With over a decade of experience, we specialize in designing and building modern, luxurious, and highly functional workspaces that elevate brand identity and foster innovation.
               </p>
 
-              <Row className="mt-4 mb-5 g-4 border-top border-bottom py-4" style={{ borderColor: 'rgba(255,255,255,0.05) !important' }}>
+              <Row className="mt-4 mb-2 g-4 border-top border-bottom py-4 about-stats-row">
                 <Col sm={6}>
                   <div className="d-flex flex-column">
-                    <h2 className="display-3 mb-2 font-cinzel" style={{ color: 'var(--cs-lightblue)' }}>12+</h2>
-                    <p className="mb-0 text-uppercase text-dark font-sans" style={{ letterSpacing: '0.1em', fontSize: '0.75rem', opacity: 0.7 }}>Years of Excellence</p>
+                    <h2 className="display-3 mb-2 font-cinzel stats-number">12+</h2>
+                    <p className="mb-0 text-uppercase text-dark font-sans stats-label">Years of Excellence</p>
                   </div>
                 </Col>
                 <Col sm={6}>
                   <div className="d-flex flex-column">
-                    <h2 className="display-3 mb-2 font-cinzel" style={{ color: 'var(--cs-lightblue)' }}>500+</h2>
-                    <p className="mb-0 text-uppercase text-dark font-sans" style={{ letterSpacing: '0.1em', fontSize: '0.75rem', opacity: 0.7 }}>Projects Completed</p>
+                    <h2 className="display-3 mb-2 font-cinzel stats-number">500+</h2>
+                    <p className="mb-0 text-uppercase text-dark font-sans stats-label">Projects Completed</p>
                   </div>
                 </Col>
               </Row>
 
               <Link href="/about" className="text-decoration-none">
                 <button
-                  className="btn rounded-0 px-5 py-3 text-uppercase font-sans"
-                  style={{
-                    backgroundColor: 'transparent',
-                    color: 'var(--text-dark)',
-                    border: '1px solid var(--accent-color)',
-                    letterSpacing: '0.15em',
-                    fontSize: '0.85rem',
-                    transition: 'all 0.4s ease'
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.backgroundColor = 'var(--accent-color)';
-                    e.target.style.color = 'white';
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.backgroundColor = 'transparent';
-                    e.target.style.color = 'var(--text-dark)';
-                  }}
+                  className="btn rounded-0 px-5 py-3 text-uppercase font-sans btn-outline-accent"
                 >
                   Discover More
                 </button>

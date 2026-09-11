@@ -10,21 +10,21 @@ const testimonials = [
     name: 'Sarah Jenkins',
     role: 'CEO, TechFlow Inc.',
     content: 'The team transformed our barren office into a vibrant, intelligent workspace. Their attention to luxury and detail is unmatched in the industry.',
-    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80'
+    img: '/cs-india/399.jpg'
   },
   {
     id: 2,
     name: 'Michael Chen',
     role: 'Director, Urban Boutiques',
     content: 'Our retail spaces have seen a 40% increase in footfall since the redesign. They truly understand how spatial flow impacts customer experience.',
-    img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80'
+    img: '/cs-india/106.jpg'
   },
   {
     id: 3,
     name: 'Eleanor Vance',
     role: 'Homeowner',
     content: 'They delivered a residential project that feels like a five-star hotel. From the lighting to the textures, everything exudes premium quality.',
-    img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80'
+    img: '/cs-india/400.jpg'
   }
 ];
 
@@ -36,7 +36,7 @@ export default function TestimonialSection() {
 
   return (
     <section className="" style={{ backgroundColor: 'var(--bg-dark)' }}>
-      <Container className="py-5 mt-4 mb-4">
+      <Container className="py-5 mt-4">
         <Row className="align-items-center">
           <Col lg={4} className="mb-5 mb-lg-0">
             <motion.div
@@ -91,7 +91,7 @@ export default function TestimonialSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="position-relative z-1 p-4 p-md-5 luxury-card"
+                className="position-relative z-1 px-4 py-3 luxury-card"
               >
                 <p className="lead text-dark mb-5 font-sans" style={{ fontSize: '1.25rem', lineHeight: 1.8, fontStyle: 'italic', fontWeight: 300 }}>
                   "{testimonials[active].content}"

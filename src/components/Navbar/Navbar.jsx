@@ -26,7 +26,7 @@ export default function AppNavbar() {
       expanded={expanded}
       expand="lg"
       fixed="top"
-      className={`transition-all duration-500 ${isDarkBg ? 'py-3' : 'py-4'}`}
+      className={`transition-all duration-500 py-0`}
       style={{
         transition: 'all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)',
         backgroundColor: isDarkBg ? 'rgba(255, 255, 255, 0.95)' : 'transparent',

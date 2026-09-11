@@ -15,9 +15,9 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="" style={{ backgroundColor: 'var(--primary-color)' }}>
-      <Container className="py-5 my-4">
-        <div className="text-center mb-5 pb-3">
+    <section id="services" className="services-section">
+      <Container className="py-5">
+        <div className="text-center pb-3">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -25,17 +25,17 @@ export default function ServicesSection() {
             transition={{ duration: 1 }}
           >
             <div className="d-flex align-items-center justify-content-center mb-3">
-              <div style={{ width: '30px', height: '1px', backgroundColor: 'var(--accent-color)', marginRight: '10px' }}></div>
-              <h6 className="text-uppercase mb-0 font-sans" style={{ color: 'var(--accent-color)', letterSpacing: '0.2em', fontSize: '0.8rem' }}>
+              <div className="section-label-line"></div>
+              <h6 className="text-uppercase mb-0 font-sans section-label-text">
                 Expertise
               </h6>
-              <div style={{ width: '30px', height: '1px', backgroundColor: 'var(--accent-color)', marginLeft: '10px' }}></div>
+              <div className="section-label-line section-label-line--right"></div>
             </div>
 
             <h2 className="display-4 text-dark font-cinzel">
-              Our <span className="font-serif text-logo-accent font-italic" style={{ fontStyle: 'italic', color: 'var(--cs-lightblue)' }}>Expertise</span>
+              Our <span className="font-serif text-logo-accent font-italic accent-italic">Expertise</span>
             </h2>
-            <p className="lead text-muted mx-auto font-sans" style={{ maxWidth: '600px', fontWeight: 300, fontSize: '1.05rem' }}>
+            <p className="lead text-muted mx-auto font-sans services-description">
               We provide comprehensive interior design and build solutions to transform your vision into reality.
             </p>
           </motion.div>
@@ -49,22 +49,17 @@ export default function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="card h-100 border-0 luxury-card p-2"
-                style={{ borderRadius: '0' }}
+                className="card h-100 border-0 luxury-card p-2 services-card"
               >
                 <div className="card-body p-4 p-lg-5 d-flex flex-column position-relative z-1 h-100">
-                  <div className="mb-4" style={{ color: 'var(--accent-color)' }}>
+                  <div className="mb-4 service-icon">
                     {service.icon}
                   </div>
-                  <h4 className="font-cinzel text-dark mb-3" style={{ fontSize: '1.4rem' }}>{service.title}</h4>
-                  <p className="font-sans mb-4 flex-grow-1" style={{ color: 'var(--text-dark)', fontWeight: 300, fontSize: '0.95rem', lineHeight: 1.6, opacity: 0.8 }}>{service.desc}</p>
+                  <h4 className="font-cinzel text-dark mb-3 service-title">{service.title}</h4>
+                  <p className="font-sans mb-4 flex-grow-1 content-description">{service.desc}</p>
 
                   <div className="mt-auto">
-                    <a href="#" className="font-sans text-uppercase text-decoration-none d-inline-flex align-items-center"
-                      style={{ color: 'var(--text-dark)', fontSize: '0.8rem', letterSpacing: '0.1em', transition: 'color 0.3s', fontWeight: 500 }}
-                      onMouseOver={e => e.currentTarget.style.color = 'var(--accent-color)'}
-                      onMouseOut={e => e.currentTarget.style.color = 'var(--text-dark)'}
-                    >
+                    <a href="#" className="font-sans text-uppercase text-decoration-none d-inline-flex align-items-center explore-link">
                       Explore <span className="ms-2">→</span>
                     </a>
                   </div>
@@ -76,25 +71,7 @@ export default function ServicesSection() {
 
         <div className="text-center mt-5 pt-4">
           <Link href="/services" className="text-decoration-none">
-            <button
-              className="btn rounded-0 px-5 py-3 text-uppercase font-sans"
-              style={{
-                backgroundColor: 'transparent',
-                color: 'var(--text-dark)',
-                border: '1px solid var(--accent-color)',
-                letterSpacing: '0.15em',
-                fontSize: '0.85rem',
-                transition: 'all 0.4s ease'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.backgroundColor = 'var(--accent-color)';
-                e.target.style.color = 'white';
-              }}
-              onMouseOut={(e) => {
-                e.target.style.backgroundColor = 'transparent';
-                e.target.style.color = 'var(--text-dark)';
-              }}
-            >
+            <button className="btn rounded-0 px-5 py-3 text-uppercase font-sans btn-outline-accent">
               View All Services
             </button>
           </Link>

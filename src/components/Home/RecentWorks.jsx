@@ -6,12 +6,12 @@ import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 
 const projects = [
-  { id: 1, title: 'Modern Workspace', category: 'Commercial', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80', size: 'large' },
-  { id: 2, title: 'Urban Loft', category: 'Residential', img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80', size: 'small' },
-  { id: 3, title: 'Boutique Hotel', category: 'Hospitality', img: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80', size: 'small' },
-  { id: 4, title: 'Corporate HQ', category: 'Commercial', img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80', size: 'large' },
-  { id: 5, title: 'Luxury Villa', category: 'Residential', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80', size: 'small' },
-  { id: 6, title: 'Tech Startup', category: 'Workspace', img: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80', size: 'small' },
+  { id: 1, title: 'Modern Workspace', category: 'Commercial', img: '/cs-india/2602%20D1.png', size: 'large' },
+  { id: 2, title: 'Urban Loft', category: 'Residential', img: '/cs-india/MASTER%201.jpg', size: 'small' },
+  { id: 3, title: 'Boutique Hotel', category: 'Hospitality', img: '/cs-india/IMG-0104.PNG', size: 'small' },
+  { id: 4, title: 'Corporate HQ', category: 'Commercial', img: '/cs-india/IMG-0106.PNG', size: 'large' },
+  { id: 5, title: 'Luxury Villa', category: 'Residential', img: '/cs-india/Parents%20Bedroom_01_4.jpg', size: 'small' },
+  { id: 6, title: 'Tech Startup', category: 'Workspace', img: '/cs-india/M1.jpg', size: 'small' },
 ];
 
 export default function RecentWorks() {
@@ -21,8 +21,8 @@ export default function RecentWorks() {
   const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter);
 
   return (
-    <section id="recent-works" className="py-5" style={{ backgroundColor: 'var(--bg-light)' }}>
-      <Container className="py-5 mt-4">
+    <section id="recent-works" className="" style={{ backgroundColor: 'var(--bg-light)' }}>
+      <Container className="py-5">
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 pb-3">
           <div className="mb-4 mb-md-0">
             <motion.div
@@ -76,7 +76,7 @@ export default function RecentWorks() {
           </motion.div>
         </div>
 
-        <Row className="g-4">
+        <Row className="g-3">
           {filteredProjects.map((project, index) => (
             <Col lg={project.size === 'large' ? 8 : 4} md={6} key={project.id}>
               <motion.div
@@ -143,7 +143,7 @@ export default function RecentWorks() {
           ))}
         </Row>
         
-        <div className="text-center mt-5 pt-4">
+        <div className="text-center mt-3 pt-4">
           <Link href="/projects" className="text-decoration-none">
             <button 
               className="btn rounded-0 px-5 py-3 text-uppercase font-sans shadow-sm"

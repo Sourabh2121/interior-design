@@ -17,7 +17,7 @@ export default function PageHeader({ title, subtitle, bgImage }) {
       <div 
         className="position-absolute top-0 start-0 w-100 h-100 z-0"
         style={{
-          backgroundImage: `url(${bgImage || 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80'})`,
+          backgroundImage: `url(${bgImage || '/cs-india/IMG-0108.PNG'})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed', // slight parallax

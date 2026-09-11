@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function VisionMission() {
   return (
     <section className="" style={{ backgroundColor: 'var(--secondary-color)' }}>
-      <Container className="py-5">
+      <Container className="pb-3 pb-lg-5">
         <Row className="g-5">
           {/* Vision Section */}
           <Col md={6}>
@@ -14,7 +14,7 @@ export default function VisionMission() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8 }}
-              className="p-5 h-100 rounded-4 shadow-sm"
+              className="px-4 py-3 h-100 rounded-4 shadow-sm"
               style={{ backgroundColor: 'var(--primary-color)' }}
             >
               <div className="mb-4 d-inline-block p-3 rounded-circle" style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)' }}>
@@ -37,7 +37,7 @@ export default function VisionMission() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="p-5 h-100 rounded-4 shadow-lg"
+              className="px-4 py-3 h-100 rounded-4 shadow-lg"
               style={{ backgroundColor: 'var(--secondary-color)' }}
             >
               <div className="mb-4 d-inline-block p-3 rounded-circle" style={{ backgroundColor: 'rgba(3, 169, 244, 0.1)' }}>

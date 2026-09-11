@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="pt-5 pb-4" style={{ backgroundColor: '#121212', color: '#ffffff' }}>
+    <footer className="pt-3" style={{ backgroundColor: '#121212', color: '#ffffff' }}>
       <Container className="pt-4">
         <Row className="gy-5">
           <Col lg={4} className="pe-lg-5">
