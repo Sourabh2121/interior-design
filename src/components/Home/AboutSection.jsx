@@ -76,11 +76,11 @@ export default function AboutSection() {
 
               <h2 className="display-4 mb-4 text-dark font-cinzel about-heading">
                 Redefining <br />
-                <span className="font-serif text-logo-accent font-italic accent-italic">Commercial Interiors</span>
+                <span className="font-serif text-logo-accent font-italic accent-italic">Interior Spaces</span>
               </h2>
 
               <p className="lead text-muted  font-sans about-description">
-                With over a decade of experience, we specialize in designing and building modern, luxurious, and highly functional workspaces that elevate brand identity and foster innovation.
+                With over a decade of experience, we specialize in designing and building luxurious residential homes and highly functional commercial workspaces that elevate your lifestyle and brand identity.
               </p>
 
               <Row className="mt-4 mb-2 g-4 border-top border-bottom py-4 about-stats-row">

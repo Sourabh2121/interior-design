@@ -135,6 +135,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 /* Smooth scrolling for the whole page */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Animated Underline for Nav Links */

@@ -19,22 +19,14 @@ export default function AppNavbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isDarkBg = !isHome || scrolled;
+  const isDarkBg = !isHome || scrolled || expanded;
 
   return (
     <Navbar
       expanded={expanded}
       expand="lg"
       fixed="top"
-      className={`transition-all duration-500 py-0`}
-      style={{
-        transition: 'all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)',
-        backgroundColor: isDarkBg ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
-        backdropFilter: isDarkBg ? 'blur(20px)' : 'none',
-        WebkitBackdropFilter: isDarkBg ? 'blur(20px)' : 'none',
-        borderBottom: isDarkBg ? '1px solid rgba(0, 0, 0, 0.05)' : '1px solid transparent',
-        boxShadow: isDarkBg ? '0 4px 20px rgba(0,0,0,0.03)' : 'none'
-      }}
+      className={`app-navbar py-0 ${isDarkBg ? 'navbar-scrolled' : ''}`}
     >
       <Container>
         <Navbar.Brand as={Link} href="/" className="fw-bold d-flex align-items-center">
@@ -65,27 +57,8 @@ export default function AppNavbar() {
               <NavDropdown.Item as={Link} href="/case-studies" className="font-sans text-dark py-2">Case Studies</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link as={Link} href="#contact" className="ms-lg-4 mt-3 mt-lg-0" style={{ padding: 0 }}>
-              <button 
-                className="btn rounded-0 px-4 py-2 text-uppercase"
-                style={{ 
-                  backgroundColor: 'transparent',
-                  border: '1px solid var(--accent-color)',
-                  color: 'var(--accent-color)',
-                  fontFamily: 'var(--font-sans)',
-                  letterSpacing: '0.1em',
-                  fontSize: '0.85rem',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseOver={(e) => {
-                  e.target.style.backgroundColor = 'var(--accent-color)';
-                  e.target.style.color = 'white';
-                }}
-                onMouseOut={(e) => {
-                  e.target.style.backgroundColor = 'transparent';
-                  e.target.style.color = 'var(--accent-color)';
-                }}
-              >
+            <Nav.Link as={Link} href="#contact" className="ms-lg-4 mt-3 mt-lg-0 nav-contact-link">
+              <button className="btn rounded-0 px-4 py-2 text-uppercase nav-contact-btn">
                 Contact Us
               </button>
             </Nav.Link>

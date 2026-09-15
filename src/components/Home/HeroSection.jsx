@@ -64,7 +64,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 0.4 }}
               >
-                CS India is a premium interior architecture firm. We blend aesthetics and functionality to create environments that elevate your brand and lifestyle.
+                CS India is a premium interior design firm. We blend aesthetics and functionality to create stunning commercial and residential environments that elevate your brand and lifestyle.
               </motion.p>
 
               <motion.div
