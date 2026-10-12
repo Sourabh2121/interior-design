@@ -6,12 +6,12 @@ import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 
 const projects = [
-  { id: 1, title: 'Modern Workspace', category: 'Commercial', img: '/cs-india/2602%20D1.png', size: 'large' },
-  { id: 2, title: 'Urban Loft', category: 'Residential', img: '/cs-india/MASTER%201.jpg', size: 'small' },
-  { id: 3, title: 'Boutique Hotel', category: 'Hospitality', img: '/cs-india/IMG-0104.PNG', size: 'small' },
-  { id: 4, title: 'Corporate HQ', category: 'Commercial', img: '/cs-india/IMG-0106.PNG', size: 'large' },
-  { id: 5, title: 'Luxury Villa', category: 'Residential', img: '/cs-india/Parents%20Bedroom_01_4.jpg', size: 'small' },
-  { id: 6, title: 'Tech Startup', category: 'Workspace', img: '/cs-india/M1.jpg', size: 'small' },
+  { id: 1, title: 'CS India Sovereign Tower (BKC Mumbai)', category: 'Commercial', img: '/cs-india/2602%20D1.png', size: 'large' },
+  { id: 2, title: 'The Sky Villa Master Suite (Worli)', category: 'Residential', img: '/cs-india/MASTER%201.jpg', size: 'small' },
+  { id: 3, title: 'Aura Luxury Hospitality Club', category: 'Hospitality', img: '/cs-india/IMG-0104.PNG', size: 'small' },
+  { id: 4, title: 'Zenith Tech Corporate Campus', category: 'Commercial', img: '/cs-india/IMG-0106.PNG', size: 'large' },
+  { id: 5, title: 'The Grand Manor Living Residence', category: 'Residential', img: '/cs-india/Parents%20Bedroom_01_4.jpg', size: 'small' },
+  { id: 6, title: 'CS India Innovation Lab & Studios', category: 'Commercial', img: '/cs-india/M1.jpg', size: 'small' },
 ];
 
 export default function RecentWorks() {

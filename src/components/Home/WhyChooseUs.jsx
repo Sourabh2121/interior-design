@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
 
   return (
     <section id="process" className="bg-white position-relative" ref={containerRef}>
-      <Container className="py-5">
+      <Container className="py-2">
         <div className="text-center mb-5 pb-4">
           <motion.h6
             initial={{ opacity: 0, y: 10 }}

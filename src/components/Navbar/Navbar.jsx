@@ -46,20 +46,15 @@ export default function AppNavbar() {
             <Nav.Link as={Link} href="/services" className={`px-3 mx-1 nav-link-custom ${isDarkBg ? 'text-dark' : 'text-white'}`}>Expertise</Nav.Link>
             <Nav.Link as={Link} href="/technology" className={`px-3 mx-1 nav-link-custom ${isDarkBg ? 'text-dark' : 'text-white'}`}>Technology</Nav.Link>
 
-            <NavDropdown title={<span className={`nav-link-custom ${isDarkBg ? 'text-dark' : 'text-white'}`}>Work</span>} id="work-dropdown" className="px-2 mx-1 nav-dropdown-custom">
+            <NavDropdown title={<span className={`nav-link-custom ${isDarkBg ? 'text-dark' : 'text-white'}`}>Portfolio</span>} id="work-dropdown" className="px-2 mx-1 nav-dropdown-custom">
               <NavDropdown.Item as={Link} href="/projects" className="font-sans text-dark py-2">All Projects</NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/projects/commercial" className="font-sans text-dark py-2">Commercial</NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/projects/workspace" className="font-sans text-dark py-2">Workspace</NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/projects" className="font-sans text-dark py-2">Commercial Offices</NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/projects" className="font-sans text-dark py-2">Luxury Residences</NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title={<span className={`nav-link-custom ${isDarkBg ? 'text-dark' : 'text-white'}`}>Insights</span>} id="insights-dropdown" className="px-2 mx-1 nav-dropdown-custom">
-              <NavDropdown.Item as={Link} href="/blogs" className="font-sans text-dark py-2">Blogs</NavDropdown.Item>
-              <NavDropdown.Item as={Link} href="/case-studies" className="font-sans text-dark py-2">Case Studies</NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link as={Link} href="#contact" className="ms-lg-4 mt-3 mt-lg-0 nav-contact-link">
+            <Nav.Link as={Link} href={isHome ? '#contact' : '/contact'} className="ms-lg-4 mt-3 mt-lg-0 nav-contact-link">
               <button className="btn rounded-0 px-4 py-2 text-uppercase nav-contact-btn">
-                Contact Us
+                Contact CS India
               </button>
             </Nav.Link>
           </Nav>

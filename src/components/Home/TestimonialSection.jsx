@@ -7,24 +7,31 @@ import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah Jenkins',
-    role: 'CEO, TechFlow Inc.',
-    content: 'The team transformed our barren office into a vibrant, intelligent workspace. Their attention to luxury and detail is unmatched in the industry.',
+    name: 'Rajesh Malhotra',
+    role: 'VP Infrastructure, Nexus FinTech',
+    content: 'CS India transformed our 45,000 sq ft corporate headquarters into an inspiring, high-performance workspace. Their turnkey execution and attention to detail delivered our facility two weeks ahead of schedule.',
     img: '/cs-india/399.jpg'
   },
   {
     id: 2,
-    name: 'Michael Chen',
-    role: 'Director, Urban Boutiques',
-    content: 'Our retail spaces have seen a 40% increase in footfall since the redesign. They truly understand how spatial flow impacts customer experience.',
+    name: 'Pooja Singhania',
+    role: 'Managing Director, Aura Luxury Retail',
+    content: 'CS India redesigned our flagship experiential studios across India. They completely understood how flow, materials, and lighting impact human experience, resulting in unprecedented customer engagement.',
     img: '/cs-india/106.jpg'
   },
   {
     id: 3,
-    name: 'Eleanor Vance',
-    role: 'Homeowner',
-    content: 'They delivered a residential project that feels like a five-star hotel. From the lighting to the textures, everything exudes premium quality.',
+    name: 'Vikram & Ananya Mehta',
+    role: 'Bespoke Residence Owners, Mumbai',
+    content: 'CS India crafted our private penthouse with five-star hotel finesse. From handpicked Italian marble to customized acoustics, the CS India team delivered perfection beyond our expectations.',
     img: '/cs-india/400.jpg'
+  },
+  {
+    id: 4,
+    name: 'Sameer Kapoor',
+    role: 'Chief Operating Officer, Zenith Cloud',
+    content: 'Working with CS India was effortless from concept to handover. Their transparent digital tracking and flawless civil execution set a benchmark for commercial design in India.',
+    img: '/cs-india/70.jpg'
   }
 ];
 

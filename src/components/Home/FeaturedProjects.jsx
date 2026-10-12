@@ -5,10 +5,10 @@ import { useRef } from 'react';
 import Link from 'next/link';
 
 const projects = [
-  { id: 1, title: 'Global Tech HQ', category: 'Office Interior', img: '/cs-india/FINAL2.jpg' },
-  { id: 2, title: 'Urban Retail Space', category: 'Commercial', img: '/cs-india/NI%20Master%20Bedroom%20option2_01.jpg' },
-  { id: 3, title: 'Boutique Hotel', category: 'Hospitality', img: '/cs-india/kitchen%20n_0022222_1.jpg' },
-  { id: 4, title: 'Creative Studio', category: 'Workspace', img: '/cs-india/guest%20bedroom%2001.jpg' },
+  { id: 1, title: 'CS India Global Tech Hub', category: 'Corporate Architecture', img: '/cs-india/FINAL2.jpg' },
+  { id: 2, title: 'The Imperial Penthouse Suite', category: 'Luxury Residential', img: '/cs-india/NI%20Master%20Bedroom%20option2_01.jpg' },
+  { id: 3, title: 'Horizon Executive Hospitality Lounge', category: 'Hospitality & Dining', img: '/cs-india/kitchen%20n_0022222_1.jpg' },
+  { id: 4, title: 'CS India Design Studio & Atelier', category: 'Commercial Workspace', img: '/cs-india/guest%20bedroom%2001.jpg' },
 ];
 
 export default function FeaturedProjects() {
