@@ -20,7 +20,7 @@
 
   --text-light: #ffffff;
   --text-muted: #a3a3a3;
-  --text-dark: #121212;
+  --text-dark: #474646;
 
   --bg-light: #fdfbf7;
   --bg-dark: #ffffff;
@@ -48,19 +48,6 @@ body {
 *::after {
   font-family: 'Manrope', sans-serif !important;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.font-serif {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
-
 .font-cinzel {
   font-family: var(--font-cinzel);
 }
