@@ -79,10 +79,7 @@ export default function ContactSection() {
                     <div>
                       <h6 className="text-white mb-1 font-sans fw-bold">Corporate Headquarters</h6>
                       <p className="text-white-50 mb-0 font-sans small">
-                        Bandra Kurla Complex (BKC), Mumbai, Maharashtra 400051
-                      </p>
-                      <p className="text-white-50 mb-0 font-sans small mt-1">
-                        Regional Studios in Gurugram (Delhi NCR) & Indiranagar (Bengaluru)
+                        CS india Kolhapur City, Maharashtra
                       </p>
                     </div>
                   </div>
@@ -96,9 +93,6 @@ export default function ContactSection() {
                       <p className="text-white-50 mb-0 font-sans small">
                         <a href="tel:+919820045678" className="text-white-50 text-decoration-none hover-text-white">+91 98200 45678</a>
                       </p>
-                      <p className="text-white-50 mb-0 font-sans small">
-                        <a href="tel:+912261234500" className="text-white-50 text-decoration-none hover-text-white">+91 22 6123 4500</a>
-                      </p>
                     </div>
                   </div>
 
@@ -108,9 +102,6 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h6 className="text-white mb-1 font-sans fw-bold">Email Inquiries</h6>
-                      <p className="text-white-50 mb-0 font-sans small">
-                        <a href="mailto:projects@csindia.com" className="text-white-50 text-decoration-none hover-text-white">projects@csindia.com</a>
-                      </p>
                       <p className="text-white-50 mb-0 font-sans small">
                         <a href="mailto:contact@csindia.com" className="text-white-50 text-decoration-none hover-text-white">contact@csindia.com</a>
                       </p>

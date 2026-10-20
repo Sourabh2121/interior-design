@@ -59,11 +59,11 @@ export default function Footer() {
             <div className="font-sans small text-white-50 d-flex flex-column gap-3">
               <div className="d-flex align-items-start gap-2">
                 <FaMapMarkerAlt className="mt-1" style={{ color: 'var(--cs-lightblue)', flexShrink: 0 }} />
-                <span>Bandra Kurla Complex (BKC), Mumbai • Indiranagar, Bengaluru • DLF Cyber City, Gurugram</span>
+                <span>CS india Kolhapur City, Maharashtra</span>
               </div>
               <div className="d-flex align-items-center gap-2">
                 <FaPhoneAlt style={{ color: 'var(--cs-lightblue)', flexShrink: 0 }} />
-                <a href="tel:+919820045678" className="text-white-50 text-decoration-none">+91 98200 45678</a>
+                <a href="tel:+919820045678" className="text-white-50 text-decoration-none">+91 0000000000</a>
               </div>
               <div className="d-flex align-items-center gap-2">
                 <FaEnvelope style={{ color: 'var(--cs-lightblue)', flexShrink: 0 }} />
